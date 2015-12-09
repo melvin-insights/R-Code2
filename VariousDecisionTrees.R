@@ -6,7 +6,7 @@ library(evtree)
 pf <- Species~.
 s<-sample(150,100)
 iris_train <- iris[s,]
-iris_test <- iris[s,]
+iris_test <- iris[-s,]
 
 ##rpart
 dtm <- rpart(pf , data=iris_train, method="class")
